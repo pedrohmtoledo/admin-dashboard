@@ -1,4 +1,280 @@
+:root {
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+
+}
+
+.container > * {
+    display: grid;
+    border: 1px solid;
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / 4;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+.searchbar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.searchbar input {
+    height: 1.1rem;
+    width: 30rem;
+    border-radius: 0.4rem;
+    background-color: rgb(236, 233, 233);
+}
+
+.header > * {
+    border: 1px solid;
+}
+
+.first-line {
+    display: flex;
+    justify-content: start;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    gap: 15rem;
+    align-items: center;
+}
+
+.second-line{
+    display: flex;
+    justify-content: start;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    gap: 38rem;
+    align-items: center;
+}
+
+.account {
+    height: 1rem;
+    width: 1rem;
+}
+
+#search  {
+    background-image: url(/admin-dashboard/img/magnify.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: blue;
+    height: 1rem;
+    width: 1rem;
+}
+#search span {
+    display: none;
+}
+.notifications {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+#notification {
+    background-image: url(/admin-dashboard/img/bell-ring-outline.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: blue;
+    height: 1rem;
+    width: 1rem;
+
+}
+#notification span {
+    display: none;
+}
+.greetings {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 0.5rem;
+}
+.greetings img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.greetings div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.greetings div .greeting{
+    font-size: 0.7rem;
+}
+.header .buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.mybutton {
+    box-shadow:inset 0px 0px 0px 0px #3e6d9c;
+	background-color:#2bb5ff;
+	border-radius:20px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:16px;
+	padding:6px 38px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #154682;
+
+}
+.mybutton:hover {
+	background-color:#0061a7;
+}
+.mybutton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.dashboard {
+    grid-area: 1 / 1 / 4 / 2;
+    background-color: aquamarine;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+}
+
+.projects {
+    grid-area: 2 / 2 / 4 / 3;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    overflow: auto;
+    gap: 1rem;
+
+}
+.card-imgs {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    padding-right: 1rem;
+}
+.card-imgs > * {
+    width: 1rem;
+    height: 1rem;
+    
+    
+}
+.card .text {
+    width: 100%;
+    height: 66%;
+    overflow: auto;
+    
+   
+
+}
+.card > * {
+    border: 1px solid;
+    padding-left: 1rem;
+    word-wrap: break-word;
+}
+.card {
+    border: 1px solid;
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    word-wrap: break-word;
+    padding-top: 1rem;
+}
+
+.announcements {
+    grid-area: 2 / 3 / 3 / 4;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.announcement{
+    padding-bottom: 0.5rem;
+    padding-left: 0.3rem;
+    padding-top: 0.5rem;
+}
+hr {
+    border: 1px solid;
+    width: 15rem;
+    align-self: center;
+    
+}
+.announcement-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.trendings {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.trending-container {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.title-container img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.dashboard > * {
+    border: 1px solid;
+    right: 10px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: start;
+}
+
+li img{
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+ul li {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
